@@ -1,0 +1,7 @@
+.card__said-text {
+  font-size: 1em;
+  font-weight: 100;
+}
+.card__said-text:first-child {
+  margin-bottom: 15px;
+}

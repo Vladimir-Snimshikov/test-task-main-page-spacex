@@ -1,0 +1,13 @@
+body {
+  background-color: #010a13;
+  box-sizing: border-box;
+  height: 100vh;
+  margin: 0 auto;
+  font-family: 'Inter', 'Arial', sans-serif;
+  padding: 0;
+  --link-color: #d8d6d6;
+  --hover-efect-color: #9b9595;
+  --button-spanncolor: #a9b8eb;
+  --burger-gradient: #b15a0fe0;
+  --main-gradient: #ed3d07;
+}

@@ -1,0 +1,6 @@
+.info__subtitle {
+  font-size: 1em;
+  background: linear-gradient(90deg, #fff 20%, var(--main-gradient));
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}

@@ -1,0 +1,21 @@
+#root {
+  background: url(../../images/background.webp) center;
+}
+
+#root::after {
+  content: '';
+  position: absolute;
+  background: url(../../images/planet.webp) no-repeat center;
+  top: 120px; /*660(высота стриницы) - 420(высота планеты) / 2 */
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 440px;
+  height: 420px;
+  z-index: 1;
+}
+
+@media screen and (max-width: 1199px) {
+  #root::after {
+    display: none;
+  }
+}

@@ -11,7 +11,7 @@ export const cardsSlice = createSlice({
   reducers: {},
 });
 
-export const {} = cardsSlice.actions;
+/* export const {} = cardsSlice.actions; */
 
 export const selectCardsData = (state) => state.cards.cardsData;
 

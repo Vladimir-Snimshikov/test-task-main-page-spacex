@@ -2,24 +2,41 @@ import { useSelector } from 'react-redux';
 import { selectCardsData } from '../../store/cardsSlice';
 import Card from '../Card/Card';
 import Button from '../Button/Button';
-function Main() {
+import classNames from '../../utils/classNames';
+import { useMemo } from 'react';
+
+const {
+  info,
+  infoTextContainer,
+  infoTitle,
+  infoSubtitle,
+  infoCardsContainer,
+  section,
+} = classNames;
+
+function Main(porps) {
   const cardsData = useSelector(selectCardsData);
+  const { text } = porps;
+
+  const MemoizedCard = useMemo(() => {
+    return (props) => <Card {...props} />;
+  }, []);
 
   return (
     <main className="main">
-      <section className="info section section_place_info">
-        <div className="info__text-container">
-          <h1 className="info__title">ПУТЕШЕСТВИЕ</h1>
+      <section className={`${info} ${section}`}>
+        <div className={infoTextContainer}>
+          <h1 className={infoTitle}>{text.title}</h1>
 
-          <span className="info__subtitle">на красную планету</span>
+          <span className={infoSubtitle}>{text.subtitle}</span>
         </div>
 
-        <ul className="info__right-container">
+        <ul className={infoCardsContainer}>
           {cardsData.map((card) => {
-            return <Card key={card.id} {...card} />;
+            return <MemoizedCard key={card.id} {...card} />;
           })}
         </ul>
-        <Button></Button>
+        <Button buttonText="Начать путешествие"></Button>
       </section>
     </main>
   );

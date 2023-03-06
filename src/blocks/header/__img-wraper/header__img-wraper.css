@@ -1,0 +1,15 @@
+@media screen and (max-width: 1023px) {
+  .header__img-wraper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header__img-wraper {
+    position: relative;
+    column-gap: 20px;
+    z-index: 4;
+  }
+}

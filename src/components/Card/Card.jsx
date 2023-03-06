@@ -1,12 +1,11 @@
 import { Link } from 'react-router-dom';
 import classNames from '../../utils/classNames';
+import { memo } from 'react';
 
 const { card, cardSaidText, cardMainText, cardContainer, link, cardBonusText } =
   classNames;
 
-function Card(props) {
-  const { mainText, saidTextTop, saidTextbottom, bonusText } = props;
-
+function Card({ mainText, saidTextTop, saidTextbottom, bonusText }) {
   return (
     <li className={card}>
       <Link className={link}>
@@ -27,4 +26,4 @@ function Card(props) {
   );
 }
 
-export default Card;
+export default memo(Card);

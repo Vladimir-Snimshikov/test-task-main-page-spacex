@@ -1,0 +1,14 @@
+.info {
+  display: grid;
+  grid-template-columns: auto min-content;
+  grid-template-rows: 150px 150px;
+  row-gap: 10px;
+}
+
+@media screen and (max-width: 767px) {
+  .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

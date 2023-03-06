@@ -1,0 +1,20 @@
+.info__text-container {
+  color: var(--link-color);
+  font-family: sans-serif;
+  display: block;
+  flex-direction: column;
+  font-size: 27px;
+}
+
+@media screen and (max-width: 1023px) {
+  .info__text-container {
+    font-size: 21px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .info__text-container {
+    text-align: center;
+    font-size: 18px;
+  }
+}

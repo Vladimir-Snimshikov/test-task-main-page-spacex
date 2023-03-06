@@ -1,0 +1,24 @@
+.header__nav-item {
+  position: relative;
+  font-size: 16px;
+  color: var(--link-color);
+}
+
+.header__nav-item:hover {
+  color: var(--hover-efect-color);
+  transition: color 0.1s ease-in;
+}
+
+.header__nav-item:hover::before {
+  content: '';
+  width: 100%;
+  border: 1px solid var(--hover-efect-color);
+  position: absolute;
+  bottom: -7px;
+}
+
+@media screen and (max-width: 767px) {
+  .header__nav-item {
+    font-size: 24px;
+  }
+}
